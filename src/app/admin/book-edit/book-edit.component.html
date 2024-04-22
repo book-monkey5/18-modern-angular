@@ -1,0 +1,7 @@
+<h1>Edit Book</h1>
+
+@if (book$ | async; as book) {
+<bm-book-form
+  [book]="book"
+  (submitBook)="update($event)"></bm-book-form>
+}

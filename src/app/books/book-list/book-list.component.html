@@ -1,0 +1,12 @@
+<h1>Books</h1>
+@if (books(); as books) {
+  <ul class="book-list">
+  @for (book of books; track book.isbn) {
+  <li>
+    <bm-book-list-item [book]="book"></bm-book-list-item>
+  </li>
+  } @empty {
+  <li>No books available.</li>
+  }
+</ul>
+}
