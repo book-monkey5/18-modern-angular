@@ -1,15 +1,14 @@
-import { Component, effect, inject, input, output } from '@angular/core';
+import { Component, effect, input, output } from '@angular/core';
 import { FormArray, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { Book } from '../../shared/book';
 import { FormErrorsComponent } from '../form-errors/form-errors.component';
-import { AsyncValidatorsService } from '../shared/async-validators.service';
-import { atLeastOneValue, isbnFormat } from '../shared/validators';
+import { atLeastOneValue, isbnExists, isbnFormat } from '../shared/validators';
 
 @Component({
   selector: 'bm-book-form',
   templateUrl: './book-form.component.html',
-  styleUrls: ['./book-form.component.css'],
+  styleUrl: './book-form.component.css',
   imports: [ReactiveFormsModule, FormErrorsComponent],
   standalone: true
 })
@@ -26,12 +25,12 @@ export class BookFormComponent {
     isbn: new FormControl('', {
       nonNullable: true,
       validators: [Validators.required, isbnFormat],
-      asyncValidators: inject(AsyncValidatorsService).isbnExists(),
+      asyncValidators: isbnExists(),
     }),
     description: new FormControl('', { nonNullable: true }),
     published: new FormControl('', { nonNullable: true }),
     authors: this.buildAuthorsArray(['']),
-    thumbnailUrl: new FormControl('', { nonNullable: true }),
+    thumbnailUrl: new FormControl('', { nonNullable: true })
   });
 
   constructor() {

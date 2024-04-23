@@ -9,7 +9,7 @@ import { BookStoreService } from '../shared/book-store.service';
 @Component({
   selector: 'bm-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css'],
+  styleUrl: './search.component.css',
   imports: [RouterLink, AsyncPipe],
   standalone: true
 })

@@ -12,7 +12,7 @@ import { LoggedinOnlyDirective } from '../../shared/loggedin-only.directive';
 @Component({
   selector: 'bm-book-details',
   templateUrl: './book-details.component.html',
-  styleUrls: ['./book-details.component.css'],
+  styleUrl: './book-details.component.css',
   standalone: true,
   imports: [
     DatePipe,

@@ -1,6 +1,10 @@
-import { isFormArray, ValidatorFn } from '@angular/forms';
+import { inject } from '@angular/core';
+import { AbstractControl, AsyncValidatorFn, isFormArray, ValidatorFn } from '@angular/forms';
+import { map } from 'rxjs';
 
-export const isbnFormat: ValidatorFn = function(control) {
+import { BookStoreService } from '../../shared/book-store.service';
+
+export const isbnFormat: ValidatorFn = function (control) {
   if (!control.value || typeof control.value !== 'string') {
     return null;
   }
@@ -13,9 +17,9 @@ export const isbnFormat: ValidatorFn = function(control) {
   } else {
     return { isbnformat: true };
   }
-}
+};
 
-export const atLeastOneValue: ValidatorFn = function(control) {
+export const atLeastOneValue: ValidatorFn = function (control) {
   if (!isFormArray(control)) {
     return null;
   }
@@ -25,4 +29,13 @@ export const atLeastOneValue: ValidatorFn = function(control) {
   } else {
     return { atleastonevalue: true };
   }
-}
+};
+
+export function isbnExists(): AsyncValidatorFn {
+  const service = inject(BookStoreService);
+  return (control: AbstractControl) => {
+    return service
+      .check(control.value)
+      .pipe(map((exists) => (exists ? { isbnexists: true } : null)));
+  };
+};

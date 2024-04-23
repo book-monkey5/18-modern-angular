@@ -8,7 +8,7 @@ import { Book } from '../../shared/book';
 @Component({
   selector: 'bm-book-list-item',
   templateUrl: './book-list-item.component.html',
-  styleUrls: ['./book-list-item.component.css'],
+  styleUrl: './book-list-item.component.css',
   standalone: true,
   imports: [RouterLink, IsbnPipe, NgOptimizedImage]
 })

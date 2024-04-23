@@ -8,7 +8,7 @@ import { BookFormComponent } from '../book-form/book-form.component';
 @Component({
   selector: 'bm-book-create',
   templateUrl: './book-create.component.html',
-  styleUrls: ['./book-create.component.css'],
+  styleUrl: './book-create.component.css',
   imports: [BookFormComponent],
   standalone: true
 })

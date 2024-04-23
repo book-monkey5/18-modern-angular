@@ -5,7 +5,7 @@ import { SearchComponent } from '../search/search.component';
 @Component({
   selector: 'bm-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css'],
+  styleUrl: './home.component.css',
   imports: [RouterLink, SearchComponent],
   standalone: true
 })

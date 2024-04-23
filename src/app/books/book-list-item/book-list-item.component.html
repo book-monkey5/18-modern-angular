@@ -1,7 +1,7 @@
 @if(book(); as book) {
 <a [routerLink]="book.isbn" class="list-item">
-  @if(book.thumbnailUrl; as thumbnail) {
-  <img alt="Cover" [ngSrc]="thumbnail" width="120" height="175">
+  @if(book.thumbnailUrl) {
+  <img alt="Cover" [ngSrc]="book.thumbnailUrl" width="120" height="175">
   }
   <h2>{{ book.title }}</h2>
   @if(book.subtitle) {

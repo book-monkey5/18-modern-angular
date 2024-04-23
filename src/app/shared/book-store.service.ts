@@ -4,7 +4,9 @@ import { Observable, catchError, of } from 'rxjs';
 
 import { Book } from './book';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class BookStoreService {
   private apiUrl = 'https://api5.angular-buch.com';
   private http = inject(HttpClient);

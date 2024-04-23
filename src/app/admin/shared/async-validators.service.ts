@@ -4,7 +4,9 @@ import { map } from 'rxjs';
 
 import { BookStoreService } from '../../shared/book-store.service';
 
-@Injectable({ providedIn: 'root' })
+@Injectable({
+  providedIn: 'root'
+})
 export class AsyncValidatorsService {
   private service = inject(BookStoreService);
 
