@@ -1,16 +1,10 @@
 import { inject } from '@angular/core';
 import {
-  HttpRequest,
-  HttpEvent,
-  HttpHandlerFn
+  HttpInterceptorFn
 } from '@angular/common/http';
-import { Observable } from 'rxjs';
 import { AuthService } from './auth.service';
 
-export function authInterceptor(
-  req: HttpRequest<unknown>,
-  next: HttpHandlerFn
-): Observable<HttpEvent<unknown>> {
+export const authInterceptor: HttpInterceptorFn = (req, next) => {
   const authService = inject(AuthService);
   const token = '1234567890';
 
