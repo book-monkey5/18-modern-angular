@@ -1,1 +1,0 @@
-import{Fa as o,I as i,n as e}from"./chunk-TZZPS5AN.js";var f=(()=>{class t{isAuthenticated=i(!0);isAuthenticated$=o(this.isAuthenticated);login(){this.isAuthenticated.set(!0)}logout(){this.isAuthenticated.set(!1)}static \u0275fac=function(r){return new(r||t)};static \u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"})}return t})();export{f as a};
