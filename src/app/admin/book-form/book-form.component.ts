@@ -10,7 +10,6 @@ import { atLeastOneValue, isbnExists, isbnFormat } from '../shared/validators';
   templateUrl: './book-form.component.html',
   styleUrl: './book-form.component.css',
   imports: [ReactiveFormsModule, FormErrorsComponent],
-  standalone: true
 })
 export class BookFormComponent {
   book = input<Book>();

@@ -10,7 +10,6 @@ import { BookFormComponent } from '../book-form/book-form.component';
   templateUrl: './book-create.component.html',
   styleUrl: './book-create.component.css',
   imports: [BookFormComponent],
-  standalone: true
 })
 export class BookCreateComponent {
   private service = inject(BookStoreService);

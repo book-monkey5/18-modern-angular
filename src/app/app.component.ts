@@ -5,7 +5,6 @@ import { AuthService } from './shared/auth.service';
 
 @Component({
   selector: 'bm-root',
-  standalone: true,
   imports: [
     RouterOutlet,
     RouterLink,

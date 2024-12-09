@@ -13,7 +13,6 @@ import { BookFormComponent } from '../book-form/book-form.component';
   templateUrl: './book-edit.component.html',
   styleUrl: './book-edit.component.css',
   imports: [AsyncPipe, BookFormComponent],
-  standalone: true
 })
 export class BookEditComponent {
   private service = inject(BookStoreService);

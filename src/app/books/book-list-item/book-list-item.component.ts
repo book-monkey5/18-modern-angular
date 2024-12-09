@@ -9,7 +9,6 @@ import { Book } from '../../shared/book';
   selector: 'bm-book-list-item',
   templateUrl: './book-list-item.component.html',
   styleUrl: './book-list-item.component.css',
-  standalone: true,
   imports: [RouterLink, IsbnPipe, NgOptimizedImage]
 })
 export class BookListItemComponent {

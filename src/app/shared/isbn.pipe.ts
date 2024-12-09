@@ -1,8 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'isbn',
-  standalone: true
+  name: 'isbn'
 })
 export class IsbnPipe implements PipeTransform {
 

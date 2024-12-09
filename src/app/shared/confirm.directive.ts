@@ -1,8 +1,7 @@
 import { Directive, HostListener, input, output } from '@angular/core';
 
 @Directive({
-  selector: '[bmConfirm]',
-  standalone: true
+  selector: '[bmConfirm]'
 })
 export class ConfirmDirective {
   confirmText = input.required<string>({ alias: 'bmConfirm' });

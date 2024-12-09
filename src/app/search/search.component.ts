@@ -11,7 +11,6 @@ import { BookStoreService } from '../shared/book-store.service';
   templateUrl: './search.component.html',
   styleUrl: './search.component.css',
   imports: [RouterLink, AsyncPipe],
-  standalone: true
 })
 export class SearchComponent {
   private service = inject(BookStoreService)

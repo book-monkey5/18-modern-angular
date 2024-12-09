@@ -8,7 +8,6 @@ import { BookListItemComponent } from '../book-list-item/book-list-item.componen
   selector: 'bm-book-list',
   templateUrl: './book-list.component.html',
   styleUrl: './book-list.component.css',
-  standalone: true,
   imports: [BookListItemComponent]
 })
 export class BookListComponent {

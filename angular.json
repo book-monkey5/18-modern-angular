@@ -36,7 +36,7 @@
               "routesFile": "routes.txt"
             },
             "ssr": {
-              "entry": "server.ts"
+              "entry": "src/server.ts"
             }
           },
           "configurations": {

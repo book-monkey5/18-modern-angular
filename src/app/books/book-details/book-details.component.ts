@@ -13,7 +13,6 @@ import { LoggedinOnlyDirective } from '../../shared/loggedin-only.directive';
   selector: 'bm-book-details',
   templateUrl: './book-details.component.html',
   styleUrl: './book-details.component.css',
-  standalone: true,
   imports: [
     DatePipe,
     AsyncPipe,

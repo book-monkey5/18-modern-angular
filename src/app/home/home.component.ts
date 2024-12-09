@@ -7,6 +7,5 @@ import { SearchComponent } from '../search/search.component';
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
   imports: [RouterLink, SearchComponent],
-  standalone: true
 })
 export class HomeComponent {}

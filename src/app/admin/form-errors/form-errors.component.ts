@@ -5,7 +5,6 @@ import { FormGroupDirective } from '@angular/forms';
   selector: 'bm-form-errors',
   templateUrl: './form-errors.component.html',
   styleUrl: './form-errors.component.css',
-  standalone: true
 })
 export class FormErrorsComponent {
   controlName = input.required<string>();

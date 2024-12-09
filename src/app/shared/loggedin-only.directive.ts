@@ -3,8 +3,7 @@ import { Directive, TemplateRef, ViewContainerRef, effect, inject } from '@angul
 import { AuthService } from './auth.service';
 
 @Directive({
-  selector: '[bmLoggedinOnly]',
-  standalone: true
+  selector: '[bmLoggedinOnly]'
 })
 export class LoggedinOnlyDirective {
   private template = inject(TemplateRef);
