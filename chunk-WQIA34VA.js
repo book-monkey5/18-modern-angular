@@ -1,1 +1,0 @@
-import{E as i,Ea as o,n as e}from"./chunk-5J7R4UTK.js";var a=class t{isAuthenticated=i(!0);isAuthenticated$=o(this.isAuthenticated);login(){this.isAuthenticated.set(!0)}logout(){this.isAuthenticated.set(!1)}static \u0275fac=function(r){return new(r||t)};static \u0275prov=e({token:t,factory:t.\u0275fac,providedIn:"root"})};export{a};
